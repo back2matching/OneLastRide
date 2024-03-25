@@ -1,0 +1,182 @@
+@import '@/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	height: 80dvh;
+	max-height: 1000px;
+	z-index: 9;
+
+	background: url('../../../public/bg/vipBg.png');
+	background-size: cover;
+	background-position: top right;
+}
+
+.section .topLine {
+	position: absolute;
+
+	width: 2580px;
+	height: 112px;
+
+	left: 50%;
+	top: -14px;
+	translate: -50% 0;
+
+	filter: $color-blue-filter;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.section .bottomLine {
+	position: absolute;
+
+	width: 2580px;
+	height: 112px;
+
+	left: 50%;
+	bottom: -14px;
+	translate: -50% 0;
+
+	filter: $color-blue-filter;
+
+	transform: rotate(180deg);
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.section .blueShadow {
+	position: absolute;
+
+	width: 1000px;
+	height: auto;
+
+	left: 50%;
+	bottom: -500px;
+	translate: -50% 0;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.inside .center {
+	position: relative;
+	width: 100%;
+
+	top: 50%;
+	translate: 0 -50%;
+}
+
+.inside .center .title {
+	position: relative;
+	width: 100%;
+
+	text-align: center;
+
+	text-shadow: 0px 0px 57.12px $color-yellow;
+	color: $color-yellow;
+	font-family: $font2;
+	font-size: 72px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.inside .center .desc {
+	position: relative;
+	width: 100%;
+	margin-top: 14px;
+
+	text-align: center;
+
+	color: $color-white;
+	font-family: $font1;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.inside .center .button {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	margin-top: 62px;
+}
+
+.inside .center .button .btn {
+	position: relative;
+	width: 250px;
+	height: 70px;
+
+	background: url('../../../public/images/vipBtn.svg');
+	background-size: cover;
+
+	p {
+		color: $color-blue;
+		font-family: $font1;
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+
+		text-shadow: rgb(255, 255, 255) 2px 0px 0px,
+			rgb(255, 255, 255) 1.75517px 0.958851px 0px,
+			rgb(255, 255, 255) 1.0806px 1.68294px 0px,
+			rgb(255, 255, 255) 0.141474px 1.99499px 0px,
+			rgb(255, 255, 255) -0.832294px 1.81859px 0px,
+			rgb(255, 255, 255) -1.60229px 1.19694px 0px,
+			rgb(255, 255, 255) -1.97998px 0.28224px 0px,
+			rgb(255, 255, 255) -1.87291px -0.701566px 0px,
+			rgb(255, 255, 255) -1.30729px -1.5136px 0px,
+			rgb(255, 255, 255) -0.421592px -1.95506px 0px,
+			rgb(255, 255, 255) 0.567324px -1.91785px 0px,
+			rgb(255, 255, 255) 1.41734px -1.41108px 0px,
+			rgb(255, 255, 255) 1.92034px -0.558831px 0px;
+	}
+
+	z-index: 4;
+}
+
+// RWD
+@media (max-width: 700px) {
+	.section {
+		max-height: 100dvh;
+	}
+
+	.inside .center .title {
+		text-shadow: 3px 3px 1px #000;
+		font-size: 48px;
+	}
+
+	.inside .center .desc {
+		font-size: 20px;
+
+		text-shadow: 3px 3px 1px #000;
+	}
+
+	.inside .center .button {
+		margin-top: 24px;
+	}
+
+	.inside .center .button .btn {
+		position: relative;
+		width: 195px;
+		height: 55px;
+
+		p {
+			font-size: 26px;
+		}
+	}
+}

@@ -1,0 +1,286 @@
+@import '@/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 7;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	padding-top: 30px;
+	padding-bottom: 70px;
+}
+
+.inside .title {
+	position: relative;
+	width: 100%;
+	max-width: 470px;
+	margin: 0 auto;
+
+	text-align: center;
+
+	color: $color-yellow;
+	font-family: $font2;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+
+	text-shadow: 3px 3px 1px #000;
+
+	.roadmapTitle {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		translate: -50% -50%;
+		width: 2420px;
+		height: auto;
+
+		z-index: -1;
+		pointer-events: none;
+	}
+
+	.arrow1 {
+		position: absolute;
+		left: -170px;
+		top: -100px;
+		width: 163px;
+		height: auto;
+
+		transform: scaleX(-1);
+
+		z-index: -1;
+		pointer-events: none;
+	}
+
+	.arrow2 {
+		position: absolute;
+		right: -280px;
+		top: 0px;
+		width: 310px;
+		height: auto;
+
+		z-index: -1;
+		pointer-events: none;
+	}
+}
+
+.inside .points {
+	position: relative;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	margin-top: 120px;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.inside .points .onePoint {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	gap: 40px;
+}
+
+.inside .points .onePoint .roadmapLine {
+	position: absolute;
+
+	left: -200px;
+	bottom: -60px;
+
+	width: 720px;
+	height: auto;
+}
+
+.inside .points .onePoint .icon {
+	position: relative;
+	width: 160px;
+	height: auto;
+}
+
+.inside .points .onePoint .texts {
+	position: relative;
+}
+
+.inside .points .onePoint .texts .pointTitle {
+	position: relative;
+	width: 100%;
+	margin-top: 40px;
+
+	font-family: $font2;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.inside .points .onePoint .texts .pointDesc {
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+
+	font-family: $font1;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.inside .points .onePoint[data-value='right'] {
+	justify-content: flex-end;
+
+	.roadmapLine {
+		left: auto;
+		right: -200px;
+	}
+
+	.icon {
+		order: 2;
+	}
+
+	.texts {
+		order: 1;
+
+		.pointTitle {
+			text-align: right;
+		}
+
+		.pointDesc {
+			text-align: right;
+		}
+	}
+}
+
+.inside .points .onePoint[data-color='yellow'] {
+	.roadmapLine {
+		filter: $color-yellow-filter;
+	}
+
+	.texts {
+		.pointTitle {
+			color: $color-yellow;
+		}
+	}
+}
+
+.inside .points .onePoint[data-color='blue'] {
+	.roadmapLine {
+		filter: $color-blue-filter;
+	}
+
+	.texts {
+		.pointTitle {
+			color: $color-blue;
+		}
+	}
+}
+
+.inside .points .onePoint[data-color='red'] {
+	.roadmapLine {
+		filter: $color-red-filter;
+	}
+
+	.texts {
+		.pointTitle {
+			color: $color-red;
+		}
+	}
+}
+
+// RWD
+@media (max-width: 650px) {
+	.inside .title {
+		.arrow1 {
+			left: -100px;
+			top: -100px;
+		}
+
+		.arrow2 {
+			display: none;
+		}
+	}
+
+	.inside .points {
+		margin-top: 60px;
+		justify-content: center;
+		gap: 48px;
+	}
+
+	.inside .points .onePoint {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.inside .points .onePoint .roadmapLine {
+		left: 50%;
+		translate: -50% 0;
+	}
+
+	.inside .points .onePoint .icon {
+		position: relative;
+		width: 160px;
+		height: auto;
+	}
+
+	.inside .points .onePoint .texts {
+		width: 100%;
+		margin-top: -30px;
+	}
+
+	.inside .points .onePoint .texts .pointTitle {
+		width: 100%;
+		text-align: center;
+		margin-top: 0px;
+	}
+
+	.inside .points .onePoint .texts .pointDesc {
+		width: 100%;
+		text-align: center;
+	}
+
+	.inside .points .onePoint[data-value='right'] {
+		justify-content: center;
+
+		.roadmapLine {
+			left: 50%;
+			right: auto;
+		}
+
+		.icon {
+			order: 1;
+		}
+
+		.texts {
+			order: 2;
+
+			.pointTitle {
+				text-align: center;
+			}
+
+			.pointDesc {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.inside .title {
+		.arrow1 {
+			display: none;
+		}
+
+		.arrow2 {
+			display: none;
+		}
+	}
+}

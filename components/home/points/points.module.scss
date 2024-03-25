@@ -1,0 +1,217 @@
+@import '@/styles/variables.scss';
+
+.section {
+	position: relative;
+	width: 100%;
+	z-index: 8;
+
+	background: url('../../../public/bg/pointsBg.png');
+	background-size: cover;
+	background-position: top center;
+}
+
+.inside .pinkShadow1 {
+	position: absolute;
+
+	width: 960px;
+	height: auto;
+
+	left: -500px;
+	top: 700px;
+
+	z-index: 5;
+	pointer-events: none;
+}
+
+.inside .pinkShadow2 {
+	position: absolute;
+
+	width: 960px;
+	height: auto;
+
+	right: -500px;
+	top: 700px;
+
+	z-index: 5;
+	pointer-events: none;
+}
+
+.section .bottomLine {
+	position: absolute;
+
+	width: 8300px;
+	height: auto;
+
+	left: 50%;
+	bottom: -285px;
+	translate: -50% 0;
+
+	z-index: 5;
+	pointer-events: none;
+}
+
+.section .inside {
+	position: relative;
+	width: 90%;
+	height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	padding: 70px 0px;
+}
+
+.inside .title {
+	position: relative;
+	width: 100%;
+
+	text-align: center;
+
+	color: $color-yellow;
+	font-family: $font2;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+
+	text-shadow: 3px 3px 1px #000;
+
+	.sellingPointsTitle {
+		position: absolute;
+		left: 50%;
+		top: calc(50% + 8px);
+		translate: -50% -50%;
+		width: 1440px;
+		height: auto;
+
+		z-index: -1;
+		pointer-events: none;
+	}
+}
+
+.inside .onePoint {
+	position: relative;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	margin-top: 60px;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.inside .onePoint .pointTitle {
+	position: relative;
+	width: 100%;
+	display: flex;
+	gap: 20px;
+
+	img {
+		position: relative;
+		width: 30px;
+		height: 30px;
+	}
+
+	p {
+		position: relative;
+
+		color: $color-yellow;
+		font-family: $font1;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+	}
+}
+
+.inside .onePoint .desc {
+	position: relative;
+
+	color: $color-white;
+	font-family: $font1;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	margin-top: 20px;
+	padding-left: 90px;
+	max-width: calc(560px + 90px);
+}
+
+.inside .onePoint[data-value='right'] {
+	justify-content: flex-end;
+
+	.pointTitle {
+		justify-content: flex-end;
+	}
+
+	.desc {
+		text-align: right;
+
+		margin-top: 20px;
+		padding-left: 0px;
+		padding-right: 90px;
+	}
+}
+
+// RWD
+@media (max-width: 760px) {
+	.inside .title {
+		.sellingPointsTitle {
+			width: 1100px;
+		}
+	}
+}
+
+@media (max-width: 620px) {
+	.inside .title {
+		font-size: 42px;
+
+		.sellingPointsTitle {
+			width: 900px;
+		}
+	}
+
+	.inside .onePoint {
+		.desc {
+			padding-left: 50px;
+		}
+	}
+
+	.inside .onePoint[data-value='right'] {
+		.desc {
+			padding-left: 0px;
+			padding-right: 50px;
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	.inside .onePoint .pointTitle {
+		img {
+			display: none;
+		}
+
+		p {
+			width: 100%;
+			text-align: center;
+			text-shadow: 3px 3px 1px #000;
+		}
+	}
+
+	.inside .onePoint .desc {
+		width: 100%;
+		text-align: center !important;
+		padding: 0px !important;
+
+		text-shadow: 3px 3px 1px #000;
+	}
+
+	.inside .title {
+		font-size: 48px;
+
+		.sellingPointsTitle {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+// filters: https://angel-rs.github.io/css-color-filter-generator/
+$color-black: #000;
+$color-white: #fff;
+$color-white-filter: brightness(0) invert(1);
+
+$color-yellow: #ffbb0d;
+$color-yellow-filter: brightness(0) saturate(100%) invert(88%) sepia(22%)
+	saturate(7486%) hue-rotate(348deg) brightness(104%) contrast(104%);
+$color-pink: #ff0df5;
+$color-pink-filter: brightness(0) saturate(100%) invert(21%) sepia(96%)
+	saturate(3694%) hue-rotate(295deg) brightness(112%) contrast(118%);
+$color-red: #ff0055;
+$color-red-filter: brightness(0) saturate(100%) invert(18%) sepia(90%)
+	saturate(4231%) hue-rotate(331deg) brightness(97%) contrast(121%);
+$color-blue: #00c2ff;
+$color-blue-filter: brightness(0) saturate(100%) invert(55%) sepia(72%)
+	saturate(2846%) hue-rotate(161deg) brightness(104%) contrast(110%);
+
+$color-scroll: $color-yellow;
+$color-background-primary: #080715;
+$color-text-primary: $color-white;
+
+$font1: 'Fira Code';
+$font2: 'Nothing You Could Do';
+
+$animation1: 0.3s;
