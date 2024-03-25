@@ -20,7 +20,7 @@ export default function Bottom(props) {
 					<Button
 						className={styles.oneSocial}
 						disableRipple
-						href="https://google.com"
+						href="https://twitter.com/OLRsolana"
 						target="_blank"
 					>
 						<div className={styles.logo}>
@@ -37,7 +37,7 @@ export default function Bottom(props) {
 					<Button
 						className={styles.oneSocial}
 						disableRipple
-						href="https://google.com"
+						href="https://t.me/OneLastRideSOL"
 						target="_blank"
 					>
 						<div className={styles.logo}>

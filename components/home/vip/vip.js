@@ -27,7 +27,7 @@ export default function Vip(props) {
 						<Button
 							className={styles.btn}
 							disableRipple
-							href="https://google.com"
+							href="https://t.me/OneLastRideSOL"
 							target="_blank"
 						>
 							<Typography>JOIN</Typography>
