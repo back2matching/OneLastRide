@@ -4,7 +4,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 const name = 'One Last Ride';
 const desc =
-	'Started as a final throw of the dice by a group of crypto enthusiasts who believed in taking chances. Inspired by the highs and lows of Vegas, and the introspective journey of BoJack, this memecoin represents the ultimate bet on oneself.';
+	'$OLR distills the spirit of high-stakes adventure and personal revelation. Join SolJack Horseman on this One Last Ride and place the ultimate bet on yourself.';
 const img = 'https://i.imgur.com/4a25UdL.png';
 
 // >> Script
