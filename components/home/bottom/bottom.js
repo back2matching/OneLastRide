@@ -32,7 +32,7 @@ export default function Bottom(props) {
 								className="image"
 							/>
 						</div>
-						<Typography>OneLastRide_Global</Typography>
+						<Typography>One Last Ride</Typography>
 					</Button>
 					<Button
 						className={styles.oneSocial}
@@ -49,7 +49,7 @@ export default function Bottom(props) {
 								className="image"
 							/>
 						</div>
-						<Typography>OneLastRide_Global</Typography>
+						<Typography>OneLastRideSOL</Typography>
 					</Button>
 				</div>
 			</div>
